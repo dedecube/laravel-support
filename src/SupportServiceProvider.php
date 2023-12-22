@@ -2,9 +2,11 @@
 
 namespace Dedecube\Support;
 
+use Dedecube\Support\Commands\EnvCryptCommand;
+use Dedecube\Support\Commands\EnvGenerateCommand;
+use Dedecube\Support\Commands\EnvIgnoreCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Dedecube\Support\Commands\SupportCommand;
 
 class SupportServiceProvider extends PackageServiceProvider
 {
@@ -16,10 +18,7 @@ class SupportServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-support')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-support_table')
-            ->hasCommand(SupportCommand::class);
+            ->name('dedecube-support')
+            ->hasConfigFile();
     }
 }
