@@ -10,6 +10,11 @@
     "license": "MIT",
     "authors": [
         {
+            "name": "danieletulone",
+            "email": "daniele@dedecube.com",
+            "role": "Developer"
+        },
+        {
             "name": "dedecube",
             "email": "info@dedecube.com",
             "role": "Developer"
@@ -34,8 +39,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dedecube\\Support\\": "src/",
-            "Dedecube\\Support\\Database\\Factories\\": "database/factories/"
+            "Dedecube\\Support\\": "src/"
         }
     },
     "autoload-dev": {

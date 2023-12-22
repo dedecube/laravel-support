@@ -19,6 +19,9 @@ class SupportServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('dedecube-support')
-            ->hasConfigFile();
+            ->hasConfigFile()
+            ->hasCommand(EnvCryptCommand::class)
+            ->hasCommand(EnvGenerateCommand::class)
+            ->hasCommand(EnvIgnoreCommand::class);
     }
 }
