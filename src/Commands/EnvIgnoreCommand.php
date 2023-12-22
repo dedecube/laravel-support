@@ -35,7 +35,7 @@ class EnvIgnoreCommand extends Command
 
     private function ignoreEnvFile(array $envFile): void
     {
-        $this->info('Ignoring '. $envFile['name']);
+        $this->info('Ignoring '.$envFile['name']);
 
         $command = [
             'echo',

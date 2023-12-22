@@ -2,8 +2,8 @@
 
 namespace Dedecube\Support\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use Dedecube\Support\SupportServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

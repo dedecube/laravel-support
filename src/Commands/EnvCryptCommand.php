@@ -28,7 +28,7 @@ class EnvCryptCommand extends Command
     {
         $envFiles = $this->getEnvFilesFromConfig();
 
-        if (!file_exists(config('dedecube-support.env.output'))) {
+        if (! file_exists(config('dedecube-support.env.output'))) {
             mkdir(config('dedecube-support.env.output'), 0777, true);
         }
 
@@ -39,7 +39,7 @@ class EnvCryptCommand extends Command
 
     private function encryptEnvFile(array $envFile): void
     {
-        $this->info('Encrypting '. $envFile['name']);
+        $this->info('Encrypting '.$envFile['name']);
 
         $command = [
             'gpg',
@@ -47,8 +47,8 @@ class EnvCryptCommand extends Command
             '--cipher-algo AES256',
             '--batch',
             '--yes',
-            '--passphrase '. $envFile['passphrase'],
-            '--output '. config('dedecube-support.env.output') .'/'. $envFile['name'] .'.gpg',
+            '--passphrase '.$envFile['passphrase'],
+            '--output '.config('dedecube-support.env.output').'/'.$envFile['name'].'.gpg',
             base_path($envFile['name']),
         ];
 

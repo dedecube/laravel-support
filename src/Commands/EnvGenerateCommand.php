@@ -40,7 +40,7 @@ class EnvGenerateCommand extends Command
 
     private function generateEnvFile(array $envFile): void
     {
-        $this->info('Generating '. $envFile['name']);
+        $this->info('Generating '.$envFile['name']);
 
         $command = [
             'cp',

@@ -21,8 +21,8 @@ it('encrypts env files', function () {
     $this->artisan('env:crypt')
         ->assertExitCode(0);
 
-    expect(file_exists(config('dedecube-support.env.output') . '/.env.prestage.gpg'))
+    expect(file_exists(config('dedecube-support.env.output').'/.env.prestage.gpg'))
         ->toBeTrue()
-        ->and(file_exists(config('dedecube-support.env.output') . '/.env.stage.gpg'))
+        ->and(file_exists(config('dedecube-support.env.output').'/.env.stage.gpg'))
         ->toBeTrue();
 });
