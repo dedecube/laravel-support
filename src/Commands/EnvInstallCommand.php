@@ -2,7 +2,6 @@
 
 namespace Dedecube\Support\Commands;
 
-use Dedecube\Support\Facades\Support;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
