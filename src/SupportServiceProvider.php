@@ -5,6 +5,7 @@ namespace Dedecube\Support;
 use Dedecube\Support\Commands\EnvCryptCommand;
 use Dedecube\Support\Commands\EnvGenerateCommand;
 use Dedecube\Support\Commands\EnvIgnoreCommand;
+use Dedecube\Support\Commands\EnvInstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -22,6 +23,7 @@ class SupportServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasCommand(EnvCryptCommand::class)
             ->hasCommand(EnvGenerateCommand::class)
+            ->hasCommand(EnvInstallCommand::class)
             ->hasCommand(EnvIgnoreCommand::class);
     }
 }
