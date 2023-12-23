@@ -25,9 +25,24 @@ This is the contents of the published config file:
 
 ## Usage
 
-```php
-$support = new Dedecube\Support();
-echo $support->echoPhrase('Hello, Dedecube!');
+Generate .env.* files from .env.example
+```shell
+php artisan env:generate
+```
+
+Add .env.* files to gitignore
+```shell
+php artisan env:ignore
+```
+
+Create a secure-pushable .env.*.gpg files
+```shell
+php artisan env:crypt
+```
+
+Generate and add to gitignore .env.* files
+```shell
+php artisan env:install
 ```
 
 ## Testing
